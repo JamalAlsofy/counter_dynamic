@@ -9,12 +9,15 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { CustomcounterComponent } from './component/customcounter/customcounter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterbuttonComponent,
-    CounterdisplayComponent
+    CounterdisplayComponent,
+    CustomcounterComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { MaterialModule } from './material.module';
     MaterialModule,
     StoreModule.forRoot({counter: counterReducer}),
     BrowserAnimationsModule,
+    FormsModule
 
 
 

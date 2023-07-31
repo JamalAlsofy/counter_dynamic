@@ -23,7 +23,12 @@ on(reset, (state) =>{
     counter: 0
   }
 
-})
+}),
+on(customincrement ,(state) =>{
+  return {
+    ...state,
+    counter :state.counter +1
+  };})
 
 
 
