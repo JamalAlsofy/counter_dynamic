@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Store} from '@ngrx/store';
 import { decrement, increment, reset } from 'src/app/store/counter.actions';
+import { CounterModule } from 'src/app/store/counter.module';
 
 @Component({
   selector: 'app-counterbutton',
@@ -8,7 +9,7 @@ import { decrement, increment, reset } from 'src/app/store/counter.actions';
   styleUrls: ['./counterbutton.component.css']
 })
 export class CounterbuttonComponent   {
-constructor(private store:Store<{counter:{counter:number}}>){
+constructor(private store:Store<{counter:CounterModule}>){
 
 }
   OnIncrement(){

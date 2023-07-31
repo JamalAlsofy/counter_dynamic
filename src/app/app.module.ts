@@ -8,6 +8,7 @@ import { CounterdisplayComponent } from './component/counterdisplay/counterdispl
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     StoreModule.forRoot({counter: counterReducer}),
     BrowserAnimationsModule,
 

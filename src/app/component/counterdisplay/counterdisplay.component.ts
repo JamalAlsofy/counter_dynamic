@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { CounterModule } from 'src/app/store/counter.module';
+
 
 @Component({
   selector: 'app-counterdisplay',
@@ -10,7 +12,7 @@ export class CounterdisplayComponent implements OnInit {
 /**
  *
  */
-constructor(private store :Store<{ counter : { counter: number }}>) {
+constructor(private store :Store<{ counter : CounterModule }>) {
 
 
 }

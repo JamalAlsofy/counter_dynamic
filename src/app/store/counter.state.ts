@@ -1,4 +1,6 @@
-  export const initialState={
+import { CounterModule } from "./counter.module";
 
-  counter:0
+  export const initialState:CounterModule={
+
+  counter:5
 }
