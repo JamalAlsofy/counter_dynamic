@@ -23,7 +23,7 @@ this.store.dispatch(decrement());
 
   }
   OnRename(){
-    this.store.dispatch(changechannelname({channel:'I Love Roobaa'}));
+    this.store.dispatch(changechannelname({channel:'WHo AM I'}));
 
   }
 
