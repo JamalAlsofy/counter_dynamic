@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Store} from '@ngrx/store';
-import { decrement, increment, reset } from 'src/app/store/counter.actions';
+import { changechannelname, decrement, increment, reset } from 'src/app/store/counter.actions';
 import { CounterModule } from 'src/app/store/counter.module';
 
 @Component({
@@ -22,5 +22,10 @@ this.store.dispatch(decrement());
     this.store.dispatch(reset());
 
   }
+  OnRename(){
+    this.store.dispatch(changechannelname({channel:'I Love Roobaa'}));
+
+  }
+
 
 }

@@ -1,6 +1,8 @@
 import { createReducer, on } from "@ngrx/store";
-import {customincrement, decrement , increment, reset} from  "./counter.actions";
+import {changechannelname, customincrement, decrement , increment, reset} from  "./counter.actions";
 import { initialState } from "./counter.state";
+import { Actions } from "@ngrx/effects";
+import { Action } from "rxjs/internal/scheduler/Action";
 
 const _counterReducer = createReducer(initialState ,
   on(increment,(state) =>{
@@ -24,12 +26,18 @@ on(reset, (state) =>{
   }
 
 }),
-on(customincrement ,(state) =>{
+on(customincrement ,(state ,action ) =>{
   return {
     ...state,
-    counter :state.counter +1
-  };})
+    counter :action.action=='add'?state.counter+ action.value:state.counter-action.value
 
+  };}),
+  on(changechannelname ,(state ,action ) =>{
+  return {
+    ...state,
+    channelname :action.channel
+
+  };})
 
 
   )

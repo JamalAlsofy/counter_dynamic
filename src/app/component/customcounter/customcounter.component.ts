@@ -13,8 +13,9 @@ export class CustomcounterComponent {
 
   }
   counterinput!: number;
+  actiontype!:string;
 
   OnIncrement() {
-    this.store.dispatch(customincrement({ value: this.counterinput}));
+    this.store.dispatch(customincrement({ value: +this.counterinput, action:this.actiontype}));
   }
 }

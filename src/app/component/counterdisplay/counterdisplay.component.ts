@@ -17,10 +17,14 @@ constructor(private store :Store<{ counter : CounterModule }>) {
 
 }
 counterdisplay!:number;
+channelname!:string;
+
+
 ngOnInit():void{
 
     this.store.select('counter').subscribe(data=>{
       this.counterdisplay = data.counter;
+      this.channelname= data.channelname;
 
 
     })
